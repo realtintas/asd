@@ -1,0 +1,6 @@
+<form method="POST" action="{% url 'predict' %}">
+    {% csrf_token %}
+    <label for="input_text">Metni Girin:</label>
+    <input type="text" name="input_text" placeholder="Metni buraya yaz...">
+    <button type="submit">Tahminle</button>
+</form>

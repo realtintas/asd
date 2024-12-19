@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llama 3.1</title>
+</head>
+<body>
+    <h1>Llama 3.1 Modeli ile Etkileşim</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="prompt">Bir metin girin:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Gönder</button>
+    </form>
+    {% if response %}
+        <h2>Model Yanıtı:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
